@@ -1,0 +1,41 @@
+﻿@model MVC_Tutorial_02.Controllers.FormInput
+
+<partial name="_SimpleNav" />
+
+<form asp-action="SubmitForm">
+    <label asp-for="TextInput">文字</label>
+    <input asp-for="TextInput"placeholder="輸入任意文字..." />
+    <br />
+
+    <label asp-for="NumberInput">數字</label>
+    <input asp-for="NumberInput" type="number" placeholder="輸入數字..." >
+    <br />
+
+    <label asp-for="DateTimeInput">時間</label>
+    <input asp-for="DateTimeInput" type="datetime-local" >
+    <br />
+
+    <input asp-for="RadioInput" type="radio" value="radioValue1" >
+    <label asp-for="RadioInput">單選選項1</label>
+    <input asp-for="RadioInput" type="radio" value="radioValue2" >
+    <label asp-for="RadioInput">單選選項2</label>
+    <input asp-for="RadioInput" type="radio" value="radioValue3" >
+    <label asp-for="RadioInput">單選選項3</label>
+    <br />
+
+    <input asp-for="checkInput1" type="checkbox" value="checkValue1" >
+    <label asp-for="checkInput1">核取方塊1</label>
+    <input asp-for="checkInput2" type="checkbox" value="checkValue2" >
+    <label asp-for="checkInput2">核取方塊2</label>
+    <input asp-for="checkInput3" type="checkbox" value="checkValue3" >
+    <label asp-for="checkInput3">核取方塊3</label>
+    <br />
+
+    <select asp-for="selectInput">
+        <option value="selectValue1">下拉選項1</option>
+        <option value="selectValue1">下拉選項2</option>
+        <option value="selectValue1">下拉選項3</option>
+    </select>
+
+    <input type="submit" value="提交" />
+</form>
